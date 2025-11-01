@@ -59,21 +59,19 @@ def data_extraction_section():
     print("=" * 80)
     print("This section will:")
     print("  1. Load EEG helper functions")
-    print("  2. Decode trigger events")
-    print("  3. Process behavioral (CTT) task data")
-    print("  4. Extract EEG features from .mat files")
-    print("  5. Combine features for final dataset")
-    print("  6. Compute latent state transitions")
-    print("  7. Compress to PCA latent space")
+    print("  2. Extract EEG features from .mat files")
+    print("  3. Decode trigger events")
+    print("  4. Process behavioral (CTT) task data")
+    print("  5. Compute latent state transitions")
+    print("  6. Compress to PCA latent space")
     print("\n This process can take several minutes depending on dataset size.")
 
     scripts = [
         ("helper_func.py", "Helper Functions"),
-        ("trigger_extraction.py", "Trigger Event Decoding"),
-        ("ctt_behavioral_task.py", "CTT Behavioral Analysis"),
         ("feature_functions.py", "Feature Functions"),
         ("feature_extraction.py", "EEG Feature Extraction"),
-        ("combine_features.py", "Combine Features"),
+        ("trigger_extraction.py", "Trigger Event Decoding"),
+        ("ctt_behavioral_task.py", "CTT Behavioral Analysis"),
         ("latent_space_compression_PCA.py", "PCA Latent Compression"),
         ("latent_state_transition_pca.py", "Latent State Transitions")
     ]
@@ -108,14 +106,16 @@ def ai_model_section():
     print("This section will:")
     print("  1. Train MLP & LSTM models for latent transition prediction")
     print("  2. Run closed-loop controller simulation")
-    print("  3. Set up closed-loop environment for Reinforcement Learning")
-    print("  4. Train RL agent (PPO)")
-    print("  5. Test RL agent performance")
+    print("  3. Set up closed-loop environment")
+    print("  4. Combine features for final dataset")
+    print("  5. Train RL agent (PPO)")
+    print("  6. Test RL agent performance")
 
     scripts = [
         ("multi_model_trainer.py", "Multi-Model Trainer"),
         ("closed_loop_controller.py", "Closed-Loop Controller Simulation"),
         ("closed_loop_enviornment.py", "Closed-Loop Environment"),
+        ("combine_features.py", "Combine Features"),
         ("train_rl_agent.py", "Train RL Agent"),
         ("test_rl_agent.py", "Test RL Agent"),
     ]
@@ -155,9 +155,9 @@ def main():
     print("DATA EXTRACTION OPTIONS")
     print("-" * 80)
     print("Data extraction includes:")
-    print("  EEG feature extraction from .mat files")
     print("  Trigger event decoding")
     print("  Behavioral (CTT) task analysis")
+    print("  EEG feature extraction from .mat files")
     print("  Latent space compression (PCA)")
     print()
     print("WARNING: Data extraction can take several minutes.")
