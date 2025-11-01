@@ -105,16 +105,16 @@ def ai_model_section():
     print("=" * 80)
     print("This section will:")
     print("  1. Train MLP & LSTM models for latent transition prediction")
-    print("  2. Set up closed-loop environment")
-    print("  3. Run closed-loop controller simulation")
+    print("  2. Run closed-loop controller simulation")
+    print("  3. Set up closed-loop environment")
     print("  4. Combine features for final dataset")
     print("  5. Train RL agent (PPO)")
     print("  6. Test RL agent performance")
 
     scripts = [
         ("multi_model_trainer.py", "Multi-Model Trainer"),
-        ("closed_loop_enviornment.py", "Closed-Loop Environment"),
         ("closed_loop_controller.py", "Closed-Loop Controller Simulation"),
+        ("closed_loop_enviornment.py", "Closed-Loop Environment"),
         ("combine_features.py", "Combine Features"),
         ("train_rl_agent.py", "Train RL Agent"),
         ("test_rl_agent.py", "Test RL Agent"),
@@ -155,9 +155,9 @@ def main():
     print("DATA EXTRACTION OPTIONS")
     print("-" * 80)
     print("Data extraction includes:")
-    print("  EEG feature extraction from .mat files")
     print("  Trigger event decoding")
     print("  Behavioral (CTT) task analysis")
+    print("  EEG feature extraction from .mat files")
     print("  Latent space compression (PCA)")
     print()
     print("WARNING: Data extraction can take several minutes.")
